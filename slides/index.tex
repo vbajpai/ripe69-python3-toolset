@@ -1,0 +1,86 @@
+\documentclass{beamer}
+
+% added by Vaibhav
+% beamer specific
+%----------------------------------------------------------------------
+\usepackage{amsmath}
+\setbeamertemplate{bibliography item}{[\theenumiv]}
+\usetheme{Madrid}
+
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+\setbeamertemplate{footline}[frame number]
+
+%----------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[nolist]{acronym}
+\usepackage{url}
+\usepackage{todonotes}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage[font=footnotesize,caption=false]{subfig}
+\usepackage[multiple]{footmisc}
+\usepackage{textcomp}
+%----------------------------------------------------------------------
+
+\beamertemplatenavigationsymbolsempty
+
+%\title{Useful Tools for Measurement Research}
+%\title{Living in the Python Ecosystem for Measurement Research}
+\title{Measurement Research within the Python3 Ecosystem}
+
+%\subtitle{\scriptsize Leone Plenary, Maribor}
+
+\author{\texorpdfstring{Steffie Jacob Eravuchira and Vaibhav
+  Bajpai\newline\scriptsize\url{(s.eravuchira | v.bajpai)@jacobs-university.de}}{Author}}
+
+\institute{Computer Networks and Distributed Systems Group, \\
+Jacobs University Bremen, \\
+Bremen, Germany}
+
+\date{\small RIPE 69, London}
+
+\begin{document}
+
+\begin{acronym}
+\end{acronym}
+
+\begin{frame}[fragile]
+  \maketitle
+  \centering
+  \tiny
+  November 2014
+
+  \vfill
+
+  \framebox{\tiny Leone Project: \url{leone-project.eu}}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Table of Contents}
+\scriptsize
+\tableofcontents[currentsection, hideothersubsections]
+\end{frame}
+
+\input{sections/development-environment.tex}
+\input{sections/fetching-multidimentional-data.tex}
+\input{sections/peeking-at-the-raw-data.tex}
+\input{sections/frictionless-sql-storage.tex}
+\input{sections/frictionless-data-retrieval.tex}
+\input{sections/data-analysis.tex}
+\input{sections/data-visualization.tex}
+
+%\begin{frame}[allowframebreaks]
+        %\frametitle{References}
+        %\bibliographystyle{ieeetr}
+        %\scriptsize{\bibliography{index}}
+%\end{frame}
+
+\end{document}

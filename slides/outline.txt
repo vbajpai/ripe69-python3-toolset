@@ -1,0 +1,35 @@
+development environment
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- ipython notebook
+- securing a ipython notebook on a server
+
+
+fetching multidimensional data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- requests
+- API calls to stat.ripe.net
+- API calls to whois
+
+
+store the data locally
+~~~~~~~~~~~~~~~~~~~~~~
+
+- csvkit
+- pandas to_sql(...)
+
+
+data analysis
+~~~~~~~~~~~~~
+
+- pandas
+- ipaddress module in python 3
+
+data visualization:
+~~~~~~~~~~~~~~~~~~~
+
+- gnuplot
+- matplotlib
+- graphviz (perhaps traceroute visualization)
+- d3.js

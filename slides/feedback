@@ -1,0 +1,52 @@
+- traceroute issue on SK dataset:
+  * either update mtr to remove averaging, Sam will deploy it in UK probes (or)
+  * purge out unnecessary scamper features to make scamper small in size.
+
+- Sam will give us as much UK dataset as we want.
+
+- Getting US SK dataset is an issue because the FCC wants a US institute to
+  participate in the research. Perhaps we can collaborate with Nick Feamster.
+
+- Andrea (BT) says jitter is due to congestion in the last-mile in cable
+  networks. It would be nice to show analysis from multiple probes.
+
+- Trevor (BT) says you may not see correlation of depth level changes against
+  packet loss measurements. DLM probably uses multiple line characteristics to
+  tweak depth levels. Phil (BT) wants to know whether depth levels also
+  decrease? Generally it would nice to show analysis from multiple probes.
+
+- Phil (BT) finds it surprising that there are any diurnal patterns in
+  last-mile. Sam (SamKnows) says probably it's just cross-traffic. Trevor (BT)
+  says it's just private network devices screwing up results.
+
+- Andrea (BT) wanted to see comparison of SK and RIPE atlas last-mile latency
+  CDFs. For instance, comparing DSL (UK) last-mile latencies with DSL (US)
+  latencies.
+
+- Andrea (BT) says US uses different broadband products lines when compared to
+  UK providers. For instance, a US broadband package of 8Mbps guarantees
+  consistent 8Mbps throghput, and perhaps they don't need interleaving. While
+  in UK they provide a package tier of upto 8Mbps.
+
+- Marcelo (UC3M) wants to know why CPEs delay traceroute responses.
+
+Discussion with Andrea (BT) and Trevor (BT):
+
+
+- Andrea says DLM monitors mean time between errors (MTBE) to tweak depth
+  levels and SNR
+
+- MTBE and SNR parameters are set inside the DSL modem. Perhaps we can use
+  UPnP requests to get these parameters. However, BTHomehub devices don't have
+  UPnP enabled.
+
+- Andrea says VirginMedia modems use DOCSIS 3.0 cable modem technology. He was
+  talking about channel bonding, but I didn't undertand that part.
+
+- Andrea says cable networks are good at acheiving higher sync speeds. He also
+  says they use higher freqency on the last-mile.
+
+- Andrea says it's interesting to look at jitter in cable networks and compare
+  it with how DSL networks behave. He suggests to use very high frequency ping
+  tests (every 1 sec) to the last mile. Trevor says it's better to use a packet
+  dispersion test on SK probes. We need to read about this technique.

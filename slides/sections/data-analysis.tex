@@ -1,0 +1,66 @@
+\section{Data Analysis}
+%\begin{frame}[fragile]
+%  \frametitle{Data Analysis}
+%  \framesubtitle{\texttt{import pandas}}
+
+%  \lstset{tabsize=2, language={Python}, basicstyle=\normalsize\ttfamily,
+%      keywordstyle=\color{blue}, rulesepcolor=\color{black},
+%      captionpos=bi, breaklines=true, escapechar=*,
+%      commentstyle=\color{green}\ttfamily, emph={requests, get, json, params},
+%      emphstyle={\color{red}}}
+%    \begin{lstlisting}
+
+%df = insert(*\ldots*)
+%df = df.dropna()
+%df = df.sort(*\ldots*)
+%dfgrouped = df.groupby('column')
+%  \end{lstlisting}
+%\end{frame}
+
+
+
+\begin{frame}[fragile]
+  \frametitle{Data Analysis}
+  \framesubtitle{\texttt{import ipaddress}}
+  \lstset{tabsize=2, language={Python}, basicstyle=\normalsize\ttfamily,
+      keywordstyle=\color{blue}, rulesepcolor=\color{black},
+      captionpos=bi, breaklines=true, escapechar=*, upquote=true,
+      commentstyle=\color{green}\ttfamily, emph={},
+      emphstyle={\color{red}}}
+    \begin{lstlisting}
+import ipaddress
+shared=ipaddress.ip_network('100.64.0.0/10')
+myip=ipaddress.ip_address('192.168.0.1') 
+isPvt = myip.is_private
+print('Is*\hspace{.01\textwidth}*%s* Private[RFC1918]? *%s'%(myip,isPvt))
+
+[Out] Is 192.168.0.1 Private[RFC1918]? True
+
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Data Analysis}
+  \framesubtitle{\texttt{import socket}}
+  \lstset{tabsize=2, language={Python}, basicstyle=\normalsize\ttfamily,
+      keywordstyle=\color{blue}, rulesepcolor=\color{black},
+      captionpos=bi, breaklines=true, escapechar=*, upquote=true,
+      commentstyle=\color{green}\ttfamily, emph={},
+      emphstyle={\color{red}}}
+    \begin{lstlisting}
+import socket
+
+def if_ipv6(address):
+  try:
+    socket.inet_pton(socket.AF_INET6, address)
+    return True
+  except socket.error: return False
+
+def if_ipv4(address):
+  try:
+    socket.inet_pton(socket.AF_INET, address)
+    return True
+  except socket.error: return False
+    \end{lstlisting}
+\end{frame}
+

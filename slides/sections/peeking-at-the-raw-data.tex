@@ -1,0 +1,28 @@
+\section{Peeking at the Raw Data}
+\begin{frame}[fragile]
+  \frametitle{Peeking at the Raw Data}
+  \framesubtitle{\texttt{csvkit}}
+  \lstset{tabsize=2,  language=Tex, basicstyle=\normalsize\ttfamily,
+   breaklines=true, escapechar=*,  upquote=true}
+  \begin{lstlisting}
+$ csvcut -n data.csv 
+
+$ csvcut -c col1, col2,...  data.csv 
+
+$ csvgrep -c col1 -m pattern data.csv
+
+$ csvsort -c col1 data.csv
+
+  \end{lstlisting}
+% Lists the columns heads of a given 'csv' file.
+% Lists the values of mentioned fields of 'csv' file. 
+% Searches for a pattern in the specified column.
+ %Sorts the 'csv' data based on the specified column.
+%sql2csv --db "sqlite:///lastmile.db" --query "select * from ra_probe_api_2014 limit 5" > data.csv
+\end{frame}
+
+%\begin{frame}[fragile]
+%  \frametitle{Peeking at the Raw Data}
+%  \framesubtitle{\texttt{jq}}
+%\end{frame}
+

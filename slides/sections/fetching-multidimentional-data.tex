@@ -1,0 +1,107 @@
+
+\section{Fetching Multi-Dimensional Data}
+
+\begin{frame}[fragile]
+
+  \includegraphics[width=0.17\linewidth]{figures/requests} \\
+
+  \frametitle{Fetching Multi-Dimensional Data}
+  \framesubtitle{\texttt{import requests}}
+    \lstset{tabsize=2, language=Python, basicstyle=\normalsize\ttfamily,
+      keywordstyle=\color{blue}, rulesepcolor=\color{black},
+      captionpos=bi, breaklines=true, escapechar=*,  upquote=true,
+      commentstyle=\color{green}\ttfamily, emph={requests, get, json, params},
+      emphstyle={\color{red}} }
+    \begin{lstlisting}
+import requests
+
+def get_json_from_url(url):
+  try: res = requests.get(url)
+  except Exception as e: print(e)
+  else: return(res.json())
+    \end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Fetching Multi-Dimensional Data}
+  \framesubtitle{\texttt{requests + atlas.ripe.net}}
+    \lstset{tabsize=2, language=Python, basicstyle=\normalsize\ttfamily,
+      keywordstyle=\color{blue}, rulesepcolor=\color{black},
+      captionpos=bi, breaklines=true, escapechar=*,  upquote=true,
+      commentstyle=\color{green}\ttfamily, emph={requests, get, json, params},
+      emphstyle={\color{red}} }
+
+    \begin{lstlisting}
+count = get_total_registered_atlas_probes()*\footnote[frame]{\tiny\url{http://goo.gl/FDqISn}}*
+print("Total* Registered RIPE Atlas probes:* %d"%total)
+
+[Out] Total Registered RIPE Atlas probes: 10434
+    \end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Fetching Multi-Dimensional Data}
+  \framesubtitle{\texttt{requests} + \texttt{stat.ripe.net}}
+    \lstset{tabsize=2, language=Python, basicstyle=\normalsize\ttfamily,
+      keywordstyle=\color{blue}, rulesepcolor=\color{black},
+      captionpos=bi, breaklines=true, escapechar=*,  upquote=true,
+      commentstyle=\color{green}\ttfamily, emph={requests, get, json, params},
+      emphstyle={\color{red}} }
+    \begin{lstlisting}
+asn, holder = asn_from_endpoint('8.8.8.8')*\footnote[frame]{\tiny\url{http://goo.gl/FDqISn}}*
+print(asn, holder)
+
+[Out] 15169 GOOGLE - Google Inc.,US
+
+    \end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Fetching Multi-Dimensional Data}
+  \framesubtitle{\texttt{requests} + \texttt{stat.ripe.net}}
+    \lstset{tabsize=2, language=Python, basicstyle=\normalsize\ttfamily,
+      keywordstyle=\color{blue}, rulesepcolor=\color{black},
+      captionpos=bi, breaklines=true, escapechar=*,  upquote=true,
+      commentstyle=\color{green}\ttfamily, emph={requests, get, json, params},
+      emphstyle={\color{red}} }
+    \begin{lstlisting}
+
+holder = holder_from_asn(15169)*\footnote[frame]{\tiny\url{http://goo.gl/FDqISn}}*
+print(holder)
+
+[Out] GOOGLE - Google Inc.,US
+
+    \end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Fetching Multi-Dimensional Data}
+  \framesubtitle{\texttt{requests} + \texttt{stat.ripe.net}}
+    \lstset{tabsize=2, language=Python, basicstyle=\normalsize\ttfamily,
+      keywordstyle=\color{blue}, rulesepcolor=\color{black},
+      captionpos=bi, breaklines=true, escapechar=*,  upquote=true,
+      commentstyle=\color{green}\ttfamily, emph={requests, get, json, params},
+      emphstyle={\color{red}} }
+    \begin{lstlisting}
+node = create_pretty_node_names(holder, asn)*\footnote[frame]{\tiny\url{http://goo.gl/FDqISn}}*
+print(node)
+
+[Out] GOOGLE (AS15169)
+    \end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Fetching Multi-Dimensional Data}
+  \framesubtitle{\texttt{requests} + \texttt{peeringdb}}
+\end{frame}
+
+%\begin{frame}[fragile]
+%  \frametitle{Fetching Multi-Dimensional Data}
+%  \framesubtitle{\texttt{requests} + \texttt{whois.ripe.net}}
+%\end{frame}
+

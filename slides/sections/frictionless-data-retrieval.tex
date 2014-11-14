@@ -1,0 +1,22 @@
+\section{Frictionless Data Retrieval}
+\begin{frame}[fragile]
+  \frametitle{Frictionless Data Retrieval}
+  \framesubtitle{\texttt{import pandas as pd;} \texttt{pd.read(\dots)}}
+    \lstset{tabsize=2, language={Python}, basicstyle=\normalsize\ttfamily,
+      keywordstyle=\color{blue}, rulesepcolor=\color{black},
+      captionpos=bi, breaklines=true, escapechar=*, upquote=true,
+      showstringspaces=false, emph={requests, get, json, params},
+      emphstyle={\color{red}}}
+    \begin{lstlisting}
+
+query = '''select asn_v4,count(asn_v4) as
+           probe_count from %s where is_anchor = 0
+           and status = 1 group by asn_v4 having
+           count(asn_v4) > 50'''%TABLENAME
+
+df = pd.read_sql(query, con)
+df.head()
+  \end{lstlisting}
+  \centering
+  \includegraphics[width=.3\linewidth]{figures/pandas-read-sql}\\
+\end{frame}

@@ -1,0 +1,6 @@
+In this talk, we present a set of tools that we find useful for
+measurement research and would like to share them with the larger RIPE
+community.  Given the nature of the talk, we will make a live demo
+presentation using ipython notebook, instead of using slides. These 
+slides are only meant to give an overview of what we want to cover in the talk.
+
