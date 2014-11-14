@@ -9,6 +9,13 @@ Measurement Research within the Python3 Ecosystem
 Group](https://ripe69.ripe.net/programme/meeting-plan/mat-wg/)  
 RIPE 69, November 2014.
 
+Read-Only Notebook:
+-------------------
+
+A read-only HTML-based version of the IPython notebook is available
+[here
+&rarr;](http://nbviewer.ipython.org/github/vbajpai/ripe69-python3-toolset/blob/master/ripe69-python3-toolset.ipynb)
+
 Installation and Usage:
 -----------------------
 
