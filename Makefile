@@ -6,5 +6,5 @@ update:
 	xargs pip install -U
 
 run:
-	ipython notebook --no-browser --pylab=inline --ip=0.0.0.0 \
+	ipython notebook --no-browser --ip=0.0.0.0 \
 	--notebook-dir=`pwd` --port=7777
